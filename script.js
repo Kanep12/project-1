@@ -20,14 +20,7 @@ function getGeo(ip) {
         <div class="section">
           <h3>Location</h3>
           <p><b>IP:</b> ${data.query}</p>
-          <p><b>Continent:</b> ${data.continent}</p>
-          <p><b>Country:</b> ${data.country} (${data.countryCode})</p>
-          <p><b>Region:</b> ${data.regionName}</p>
-          <p><b>City:</b> ${data.city}</p>
-          <p><b>ZIP:</b> ${data.zip}</p>
-          <p><b>Timezone:</b> ${data.timezone}</p>
-          <p><b>Offset:</b> ${data.offset}</p>
-          <p><b>Coordinates:</b> ${data.lat}, ${data.lon}</p>
+
         </div>
 
         <div class="section">
