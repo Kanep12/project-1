@@ -3,14 +3,15 @@ const searchBtn = document.getElementById("searchBtn");
 const myIpBtn = document.getElementById("myIpBtn");
 const result = document.getElementById("result");
 
-function getGeo(ip) {
+result.style.display = "none";
 
+function getGeo(ip) {
+  result.style.display = "block";
   result.innerHTML = "Loading...";
 
   fetch("http://ip-api.com/json/" + ip)
     .then(res => res.json())
     .then(data => {
-
       if (data.status === "fail") {
         result.innerHTML = "Error: " + data.message;
         return;
@@ -18,24 +19,29 @@ function getGeo(ip) {
 
       result.innerHTML = `
         <div class="section">
-          <h3>Location</h3>
+          <h3 class="text2">IP</h3>
           <p><b>IP:</b> ${data.query}</p>
-
         </div>
 
         <div class="section">
-          <h3>Network</h3>
+          <h3 class="text2">NETWORK</h3>
           <p><b>ISP:</b> ${data.isp}</p>
-          <p><b>Org:</b> ${data.org}</p>
           <p><b>AS:</b> ${data.as}</p>
           <p><b>AS Name:</b> ${data.asname}</p>
+                    <p><b>Org:</b> ${data.org}</p>
         </div>
 
         <div class="section">
-          <h3>Security</h3>
-          <p><b>Mobile:</b> ${data.mobile}</p>
-          <p><b>Proxy:</b> ${data.proxy}</p>
-          <p><b>Hosting:</b> ${data.hosting}</p>
+          <h3 class="text2">LOC</h3>
+          <p><b>Country:</b> ${data.country}</p>
+          <p><b>Country Code:</b> ${data.countryCode}</p>
+          <p><b>City:</b> ${data.city}</p>
+                    <p><b>Region Name:</b> ${data.regionName}</p>
+          <p><b>Lat:</b> ${data.lat}</p>
+          <p><b>Lon:</b> ${data.lon}</p>
+
+
+
         </div>
       `;
     })
@@ -45,9 +51,15 @@ function getGeo(ip) {
 }
 
 searchBtn.addEventListener("click", () => {
+  if (input.value.trim() === "") {
+    result.style.display = "none";
+    return;
+  }
   getGeo(input.value);
 });
 
-myIpBtn.addEventListener("click", () => {
-  getGeo(""); // current IP
-});
+if (myIpBtn) {
+  myIpBtn.addEventListener("click", () => {
+    getGeo("");
+  });
+}
