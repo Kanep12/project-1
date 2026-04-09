@@ -1,6 +1,6 @@
 body {
   font-family: Arial;
-background-image: radial-gradient(circle, #030f21, #031125, #031229, #03142d, #021531, #011635, #011838, #01193c, #011b40, #021c44, #021e48, #03204c);
+  background-image: radial-gradient(circle, #030f21, #031125, #031229, #03142d, #021531, #011635, #011838, #01193c, #011b40, #021c44, #021e48, #03204c);
   text-align: center;
 }
 
@@ -8,23 +8,24 @@ input {
   padding: 8px;
   border-radius: 5px;
   width: 220px;
-    background-color: rgb(13, 21, 53);
+  background-color: rgb(13, 21, 53);
   color: rgba(255, 255, 255, 0.808);
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.301);
-          border: 1px solid rgba(255, 255, 255, 0.192);
-          font-size: 17px;
-                transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.301);
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  font-size: 17px;
+  transition: all 0.2s ease;
 }
+
 input::placeholder {
   color: rgba(255, 255, 255, 0.808);
 }
 
-input:hover  {
-      transform: scale(1.03);
+input:hover {
+  transform: scale(1.03);
 }
 
 button {
- 
+
   font-size: 17px;
   padding: 8px 12px;
   margin-left: 15px;
@@ -32,13 +33,15 @@ button {
   border-radius: 5px;
   background-color: rgb(13, 21, 53);
   color: rgba(255, 255, 255, 0.808);
-      transition: all 0.2s ease;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.301);
-          border: 1px solid rgba(255, 255, 255, 0.192);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.301);
+  border: 1px solid rgba(255, 255, 255, 0.192);
 }
-button:hover  {
-      transform: scale(1.03);
+
+button:hover {
+  transform: scale(1.03);
 }
+
 #result {
   display: none;
   margin: 40px auto 0;
@@ -58,12 +61,13 @@ button:hover  {
 }
 
 .text {
-text-shadow: 0 0 5px #a7a7a7, 0 0 7px #0000a1;
+  text-shadow: 0 0 5px #a7a7a7, 0 0 7px #0000a1;
   font-family: "Lobster", sans-serif;
   font-weight: 200;
   font-size: 50px;
   color: rgba(255, 255, 255, 0.808);
 }
+
 .text2 {
 
   font-weight: bold;
@@ -71,27 +75,27 @@ text-shadow: 0 0 5px #a7a7a7, 0 0 7px #0000a1;
   color: rgba(255, 255, 255, 0.808);
   text-shadow: 0 0 5px #a7a7a7, 0 0 7px #0000a1;
 }
-        #star-1 {
-            position: absolute;
-            top: 10px;
-            left: 700px;
-            font-size: 70px;
+
+#star-1 {
+  position: absolute;
+  top: 10px;
+  left: 650px;
+  font-size: 70px;
 
 
-        }
+}
 
-          #star-2 {
-            position: absolute;
-            top: 10px;
-            right: 700px;
-            font-size: 70px;
+#star-2 {
+  position: absolute;
+  top: 10px;
+  right: 650px;
+  font-size: 70px;
 
 
 
-        }
+}
 
-        
-        .stars {
-            color: antiquewhite;
-        }
-  
+
+.stars {
+  color: antiquewhite;
+}
